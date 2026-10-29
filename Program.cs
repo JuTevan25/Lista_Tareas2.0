@@ -85,12 +85,22 @@ while (salir)
       case 3:
       Console.WriteLine("== COMPLETAR TAREA ==");
       Console.WriteLine("Busca la tarea que deseas completar por su ID");
+      while(!int.TryParse(Console.ReadLine(), out id_Buscar))
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("Error: Solo es permitido valores numéricos.");
+            }
       Console.WriteLine(gestorT.completar(id_Buscar));
       break;
 
       case 4:
       Console.WriteLine("== ELIMINAR TAREA ==");
       Console.WriteLine("Ingresa el ID de la tarea para ser eliminada");
+      while(!int.TryParse(Console.ReadLine(), out id_Buscar))
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("Error: Solo es permitido valores numéricos.");
+            }
       Console.WriteLine(gestorT.eliminar(id_Buscar));
       break;
   }
