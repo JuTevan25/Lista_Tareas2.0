@@ -1,15 +1,4 @@
-﻿// Cuando el método sea static string, es de devolver mensajes o información relacionada con el método Main.
-// Cuando el método sea static int, es de cálculos numéricos o validaciones que devuelven un número entero.
-// Cuando el método sea static bool, es de validaciones que devuelven verdadero o falso.
-
-// Recordar todos los conceptos aprendidos y hacer programas más grandes y complejos.
-// if-else, switch - case, switch - when, while, do-while, for, foreach, arrays, métodos, clases POO básico, instancia de objetos, try-catch, etc.
-
-// Orden alfabético de Variables.
-
-// Ejercicio 3
-
-int opcion = 0, id_Buscar = 0;
+﻿int opcion = 0, id_Buscar = 0;
 string titulo = "";
 bool completada = false, salir = true;
 DateTime fecha = DateTime.Now;
