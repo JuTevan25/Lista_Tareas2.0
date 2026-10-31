@@ -9,7 +9,7 @@ Console.ForegroundColor = ConsoleColor.Green;
 Console.WriteLine("Bienvenido al gestor de tareas");
 Console.WriteLine("A continuación verás el menú de opciones");
 Console.WriteLine("");
-Console.ForegroundColor = ConsoleColor.White;
+Console.ResetColor();
 
 while (salir)
 { 
@@ -29,10 +29,9 @@ while (salir)
     {
         Console.ForegroundColor = ConsoleColor.Red;
         Console.WriteLine("Error: Por favor ingresa una opción válida.");
-        Console.ForegroundColor =  ConsoleColor.White;
+        Console.ResetColor();
         Console.WriteLine("");
         Console.Write(">> ");
-        
     }
     
    Console.Clear();
@@ -49,7 +48,7 @@ while (salir)
           Console.ForegroundColor = ConsoleColor.Red;
           Console.WriteLine("Error: Solo está permitido caracteres");
           Console.Write(">> ");
-          Console.ForegroundColor = ConsoleColor.White;
+          Console.ResetColor();
           titulo = Console.ReadLine() ?? "";
       }
       
@@ -58,22 +57,23 @@ while (salir)
       {
         Console.ForegroundColor = ConsoleColor.Red;
         Console.WriteLine ("Error: formato inválido");
-        Console.ForegroundColor = ConsoleColor.White;
+        Console.ResetColor();
       }
 
-      
       Console.WriteLine(gestorT.agregar(titulo, completada));
       break;
 
       case 2:
       Console.WriteLine("== LISTAR TAREA ==");
-      Console.WriteLine("A continuación verá la lista de tareas creadas.");
+      Console.WriteLine("A continuación verá la lista de tareas creadas: ");
+      Console.WriteLine("=========================");
       Console.WriteLine(gestorT.listar());
+      Console.WriteLine("=========================");
       break;
 
       case 3:
       Console.WriteLine("== COMPLETAR TAREA ==");
-      Console.WriteLine("Busca la tarea que deseas completar por su ID");
+      Console.WriteLine("Busca la tarea que deseas completar por su ID: ");
       while(!int.TryParse(Console.ReadLine(), out id_Buscar))
             {
                 Console.ForegroundColor = ConsoleColor.Red;
@@ -98,7 +98,7 @@ while (salir)
   Console.ForegroundColor = ConsoleColor.Yellow;
   Console.WriteLine("¿Deseas volver al principio? Puedes escribir 'S/N'.");
   string respuesta = Console.ReadLine()?.Trim().ToUpper()?? "";
-  Console.ForegroundColor =  ConsoleColor.White;
+  Console.ResetColor();
   Console.WriteLine("");
 
   while (respuesta != "S" && respuesta != "N")    
@@ -117,7 +117,7 @@ while (salir)
 Console.ForegroundColor = ConsoleColor.Green;
 Console.WriteLine("Muchas gracias por utilizar el gestor de tareas.");
 Console.WriteLine("¡ Hasta Luego !");
-Console.ForegroundColor = ConsoleColor.White;
+Console.ResetColor();
 
 
 public class Tarea
