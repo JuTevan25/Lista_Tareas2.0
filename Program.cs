@@ -95,7 +95,8 @@ while (salir)
   Console.WriteLine("");
 
   while (respuesta != "S" && respuesta != "N")    
-   {   Console.ForegroundColor = ConsoleColor.Red;
+   {  
+      Console.ForegroundColor = ConsoleColor.Red;
       Console.WriteLine("Error: Es válido S o N.");
       Console.WriteLine (">>:");
       Console.ResetColor();
