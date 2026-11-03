@@ -24,10 +24,10 @@ public class GestorTareas
         {
            foreach (Tarea tarea in tareas)
           {
-              Console.WriteLine($"ID: {tarea.setId()} ");
-              Console.WriteLine($"Titulo: {tarea.setTitulo()}");
-              Console.WriteLine($"Fecha de creación: {tarea.setFecha(): dd/MM/yyyy HH:mm}");
-              Console.WriteLine($"Completada: {tarea.setCompletada()}");
+              Console.WriteLine($"ID: {tarea.Id} ");
+              Console.WriteLine($"Titulo: {tarea.Titulo}");
+              Console.WriteLine($"Fecha de creación: {tarea.Fecha:dd/MM/yyyy HH:mm}");
+              Console.WriteLine($"Completada: {tarea.Completada}");
               Console.WriteLine("--------------------");
           }
         }
@@ -39,7 +39,7 @@ public class GestorTareas
 
    public string eliminar(int id_Buscar)
     {
-        Tarea ? Buscartarea = tareas.Find(t => t.setId() == id_Buscar);
+        Tarea ? Buscartarea = tareas.Find(t => t.Id == id_Buscar);
         if (Buscartarea != null)
         {
             tareas.Remove(Buscartarea);
@@ -55,18 +55,18 @@ public class GestorTareas
 
     public string completar(int id_Buscar)
     {
-        Tarea ? BuscaTarea = tareas.Find(tb => tb.setId() == id_Buscar);
+        Tarea ? BuscaTarea = tareas.Find(tb => tb.Id == id_Buscar);
         
         if(BuscaTarea != null)
         {
-           if (BuscaTarea.setCompletada())
+           if (BuscaTarea.Completada)
            {
              Console.ForegroundColor = ConsoleColor.Yellow;
              return "Advertencia: Esta tarea está completada.";
            }
            
             Console.ForegroundColor = ConsoleColor.Green;
-            BuscaTarea.marcarCompletada();
+            BuscaTarea.MarcarCompletada();
             return "Tarea Completada";
 
             
