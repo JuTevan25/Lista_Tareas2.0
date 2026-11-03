@@ -3,7 +3,7 @@ string titulo = "";
 bool completada = false, salir = true;
 DateTime fecha = DateTime.Now;
 
-GestorTareas gestorT = new GestorTareas();
+GestorTarea gestorT = new GestorTarea();
 
 Console.ForegroundColor = ConsoleColor.Green;
 Console.WriteLine("Bienvenido al gestor de tareas");

@@ -1,4 +1,4 @@
-public class GestorTareas
+public class GestorTarea
 {
     private int id_Auto = 1;
     List <Tarea> tareas = new List<Tarea>();
