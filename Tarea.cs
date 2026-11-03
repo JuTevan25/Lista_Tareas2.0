@@ -5,11 +5,11 @@ public class Tarea
     public bool Completada { get; private set; }
     public DateTime Fecha {get; private set;}
  
-    public Tarea(int id, string titulo, bool completada, DateTime fecha)
+    public Tarea(int id, string titulo, DateTime fecha)
     {
         this.Id = id;
         this.Titulo = titulo;
-        this.Completada = completada;
+        this.Completada = false;
         this.Fecha = fecha;
     }
     

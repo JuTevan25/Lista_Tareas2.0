@@ -3,10 +3,10 @@ public class GestorTarea
     private int id_Auto = 1;
     List <Tarea> tareas = new List<Tarea>();
 
-     public string agregar(string titulo, bool completada)
+     public string agregar(string titulo)
      {
         DateTime fechaCreada = DateTime.Now;
-        Tarea t = new Tarea(id_Auto,titulo, completada, fechaCreada);
+        Tarea t = new Tarea(id_Auto,titulo, fechaCreada);
         tareas.Add(t);
         Console.ForegroundColor = ConsoleColor.Green;
         id_Auto++;

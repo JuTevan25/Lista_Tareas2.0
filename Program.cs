@@ -1,6 +1,6 @@
 ﻿int opcion = 0, id_Buscar = 0;
 string titulo = "";
-bool completada = false, salir = true;
+bool salir = true;
 DateTime fecha = DateTime.Now;
 
 GestorTarea gestorT = new GestorTarea();
@@ -51,16 +51,8 @@ while (salir)
           Console.ResetColor();
           titulo = Console.ReadLine() ?? "";
       }
-      
-      Console.WriteLine("Ingrese si la tarea está completada (True/False):");
-      while (!bool.TryParse(Console.ReadLine(), out completada))
-      {
-        Console.ForegroundColor = ConsoleColor.Red;
-        Console.WriteLine ("Error: formato inválido");
-        Console.ResetColor();
-      }
-
-      Console.WriteLine(gestorT.agregar(titulo, completada));
+    
+      Console.WriteLine(gestorT.agregar(titulo));
       break;
 
       case 2:
