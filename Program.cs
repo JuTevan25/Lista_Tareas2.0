@@ -1,7 +1,6 @@
 ﻿int opcion = 0, id_Buscar = 0;
 string titulo = "";
 bool salir = true;
-DateTime fecha = DateTime.Now;
 
 GestorTarea gestorT = new GestorTarea();
 

@@ -39,7 +39,7 @@ public class GestorTarea
 
    public string eliminar(int id_Buscar)
     {
-        Tarea ? Buscartarea = tareas.Find(t => t.Id == id_Buscar);
+        Tarea? Buscartarea = tareas.Find(t => t.Id == id_Buscar);
         if (Buscartarea != null)
         {
             tareas.Remove(Buscartarea);
