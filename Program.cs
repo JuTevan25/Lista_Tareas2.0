@@ -1,4 +1,4 @@
-﻿int opcion = 0, id_Buscar = 0;
+﻿int opcion = 0, idBuscar = 0;
 string titulo = "";
 bool salir = true;
 
@@ -28,9 +28,9 @@ while (salir)
     {
         Console.ForegroundColor = ConsoleColor.Red;
         Console.WriteLine("Error: Por favor ingresa una opción válida.");
-        Console.ResetColor();
         Console.WriteLine("");
         Console.Write(">> ");
+        Console.ResetColor();
     }
     
    Console.Clear();
@@ -45,43 +45,45 @@ while (salir)
       while (string.IsNullOrWhiteSpace(titulo)|| titulo.Any(char.IsDigit))
       {
           Console.ForegroundColor = ConsoleColor.Red;
-          Console.WriteLine("Error: Solo está permitido caracteres");
+          Console.WriteLine("Error: El título no puede estar vacío ni contener números");
           Console.Write(">> ");
           Console.ResetColor();
           titulo = Console.ReadLine() ?? "";
       }
     
-      Console.WriteLine(gestorT.agregar(titulo));
+      Console.WriteLine(gestorT.Agregar(titulo));
       break;
 
       case 2:
       Console.WriteLine("== LISTAR TAREA ==");
       Console.WriteLine("A continuación verá la lista de tareas creadas: ");
       Console.WriteLine("=========================");
-      Console.WriteLine(gestorT.listar());
+      Console.WriteLine(gestorT.Listar());
       Console.WriteLine("=========================");
       break;
 
       case 3:
       Console.WriteLine("== COMPLETAR TAREA ==");
       Console.WriteLine("Busca la tarea que deseas completar por su ID: ");
-      while(!int.TryParse(Console.ReadLine(), out id_Buscar))
+      while(!int.TryParse(Console.ReadLine(), out idBuscar))
             {
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("Error: Solo es permitido valores numéricos.");
+                Console.ResetColor();
             }
-      Console.WriteLine(gestorT.completar(id_Buscar));
+      Console.WriteLine(gestorT.Completar(idBuscar));
       break;
 
       case 4:
       Console.WriteLine("== ELIMINAR TAREA ==");
       Console.WriteLine("Ingresa el ID de la tarea para ser eliminada");
-      while(!int.TryParse(Console.ReadLine(), out id_Buscar))
+      while(!int.TryParse(Console.ReadLine(), out idBuscar))
             {
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("Error: Solo es permitido valores numéricos.");
+                Console.ResetColor();
             }
-      Console.WriteLine(gestorT.eliminar(id_Buscar));
+      Console.WriteLine(gestorT.Eliminar(idBuscar));
       break;
   }
 
@@ -95,8 +97,8 @@ while (salir)
   while (respuesta != "S" && respuesta != "N")    
    {   Console.ForegroundColor = ConsoleColor.Red;
       Console.WriteLine("Error: Es válido S o N.");
-      Console.ResetColor();
       Console.WriteLine (">>:");
+      Console.ResetColor();
       respuesta = Console.ReadLine()?.Trim().ToUpper()?? "";
    }
 
