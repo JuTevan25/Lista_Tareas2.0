@@ -1,4 +1,4 @@
-📋 Sistema de gestión de tareas - Consola C# Versión 2.0 
+📋 Sistema de gestión de tareas - Consola C# Versión 2.0
 
 Programa que permite al usuario administrar su asignación de tareas de manera fácil, automática y estar al tanto de ellas, utilizando el método CRUD.
 Esta nueva versión permite mostrar una estructura en sus bloques de código más organizado, por pestañas y el funcionamiento es óptimo.
