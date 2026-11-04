@@ -30,6 +30,4 @@ Github: https://github.com/JuTevan25
 - `GestorTarea.cs`: lógica para agregar, listar, completar y eliminar
 
 ## Próximas mejoras
-- Implementación de formato JSON.
-
-- Guardar las tareas en un archivo JSON
+- Implementación de formato JSON y guardar sus tareas.
