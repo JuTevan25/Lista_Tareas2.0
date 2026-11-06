@@ -2,17 +2,16 @@ using System.Text.Json.Serialization;
 
 public class GestorTarea
 {
-    private int _idAuto = 1;
+    private int _siguienteId => _tareas.Count > 0 ? _tareas.Max(t => t.Id) + 1 : 1;
     private const string Ruta = "tareas.json";
     private List<Tarea> _tareas = AlmacenamientoJson.CargarTareas(Ruta);
 
     public string Agregar(string titulo)
     {
         DateTime fechaCreada = DateTime.Now;
-        Tarea t = new Tarea(_idAuto,titulo, fechaCreada);
+        Tarea t = new Tarea(_siguienteId, titulo, fechaCreada);
         _tareas.Add(t);
         Console.ForegroundColor = ConsoleColor.Green;
-        _idAuto++;
         AlmacenamientoJson.GuardarTareas(Ruta, _tareas); 
         return "Tarea agregada";
     }

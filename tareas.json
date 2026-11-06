@@ -1,11 +1,5 @@
 [
   {
-    "Id": 1,
-    "Titulo": "Lavar Ropa",
-    "Completada": false,
-    "Fecha": "2026-11-05T22:06:53.0284516-05:00"
-  },
-  {
     "Id": 2,
     "Titulo": "Comer",
     "Completada": false,
@@ -22,5 +16,23 @@
     "Titulo": "Cocinar ",
     "Completada": false,
     "Fecha": "2026-11-05T22:09:40.2420095-05:00"
+  },
+  {
+    "Id": 4,
+    "Titulo": "Lavar",
+    "Completada": false,
+    "Fecha": "2026-11-05T22:34:21.2097036-05:00"
+  },
+  {
+    "Id": 5,
+    "Titulo": "comer",
+    "Completada": false,
+    "Fecha": "2026-11-05T22:34:25.2413193-05:00"
+  },
+  {
+    "Id": 6,
+    "Titulo": "trapear",
+    "Completada": false,
+    "Fecha": "2026-11-05T22:34:29.1773604-05:00"
   }
 ]
