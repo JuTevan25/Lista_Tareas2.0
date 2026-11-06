@@ -10,6 +10,7 @@ public class GestorTarea
         _tareas.Add(t);
         Console.ForegroundColor = ConsoleColor.Green;
         _idAuto++;
+        AlmacenamientoJson.GuardarTareas("tareas.json", _tareas); 
         return "Tarea agregada";
     }
 
@@ -30,10 +31,12 @@ public class GestorTarea
               Console.WriteLine($"Completada: {tarea.Completada}");
               
           }
+          Console.WriteLine("");
         }
 
         Console.WriteLine("");
         Console.ForegroundColor = ConsoleColor.Green;
+        AlmacenamientoJson.GuardarTareas("tareas.json", _tareas); 
         return "Listado completado";
     }
 
@@ -44,6 +47,7 @@ public class GestorTarea
         {
             _tareas.Remove(Buscartarea);
             Console.ForegroundColor = ConsoleColor.Green;
+            AlmacenamientoJson.GuardarTareas("tareas.json", _tareas);
             return "Tarea eliminada";
         }
         else
@@ -68,6 +72,7 @@ public class GestorTarea
 
             Console.ForegroundColor = ConsoleColor.Green;
             BuscaTarea.MarcarCompletada();
+            AlmacenamientoJson.GuardarTareas("tareas.json", _tareas);
             return "Tarea Completada";
         }
         else 
@@ -76,4 +81,6 @@ public class GestorTarea
             return "Lo sentimos, esta tarea no existe";
         }
     }
+
+
 }
