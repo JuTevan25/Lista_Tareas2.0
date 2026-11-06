@@ -1,7 +1,10 @@
+using System.Text.Json.Serialization;
+
 public class GestorTarea
 {
     private int _idAuto = 1;
-    List<Tarea> _tareas = new List<Tarea>();
+    private const string Ruta = "tareas.json";
+    private List<Tarea> _tareas = AlmacenamientoJson.CargarTareas(Ruta);
 
     public string Agregar(string titulo)
     {
@@ -10,7 +13,7 @@ public class GestorTarea
         _tareas.Add(t);
         Console.ForegroundColor = ConsoleColor.Green;
         _idAuto++;
-        AlmacenamientoJson.GuardarTareas("tareas.json", _tareas); 
+        AlmacenamientoJson.GuardarTareas(Ruta, _tareas); 
         return "Tarea agregada";
     }
 
@@ -36,7 +39,7 @@ public class GestorTarea
 
         Console.WriteLine("");
         Console.ForegroundColor = ConsoleColor.Green;
-        AlmacenamientoJson.GuardarTareas("tareas.json", _tareas); 
+        AlmacenamientoJson.GuardarTareas(Ruta, _tareas); 
         return "Listado completado";
     }
 
@@ -47,7 +50,7 @@ public class GestorTarea
         {
             _tareas.Remove(Buscartarea);
             Console.ForegroundColor = ConsoleColor.Green;
-            AlmacenamientoJson.GuardarTareas("tareas.json", _tareas);
+            AlmacenamientoJson.GuardarTareas(Ruta, _tareas);
             return "Tarea eliminada";
         }
         else
@@ -72,7 +75,7 @@ public class GestorTarea
 
             Console.ForegroundColor = ConsoleColor.Green;
             BuscaTarea.MarcarCompletada();
-            AlmacenamientoJson.GuardarTareas("tareas.json", _tareas);
+            AlmacenamientoJson.GuardarTareas(Ruta, _tareas);
             return "Tarea Completada";
         }
         else 

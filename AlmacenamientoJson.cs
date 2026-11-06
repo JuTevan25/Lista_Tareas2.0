@@ -1,4 +1,5 @@
 using System.Text.Json;
+
 public class AlmacenamientoJson
 {
     private static readonly JsonSerializerOptions _opciones = new JsonSerializerOptions // Configuración de serialización

@@ -1,1 +1,26 @@
-[]
+[
+  {
+    "Id": 1,
+    "Titulo": "Lavar Ropa",
+    "Completada": false,
+    "Fecha": "2026-11-05T22:06:53.0284516-05:00"
+  },
+  {
+    "Id": 2,
+    "Titulo": "Comer",
+    "Completada": false,
+    "Fecha": "2026-11-05T22:07:12.2452657-05:00"
+  },
+  {
+    "Id": 3,
+    "Titulo": "Barrer",
+    "Completada": false,
+    "Fecha": "2026-11-05T22:07:17.8666736-05:00"
+  },
+  {
+    "Id": 1,
+    "Titulo": "Cocinar ",
+    "Completada": false,
+    "Fecha": "2026-11-05T22:09:40.2420095-05:00"
+  }
+]
