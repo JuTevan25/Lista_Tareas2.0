@@ -9,11 +9,12 @@ Esta nueva versión permite mostrar una estructura en sus bloques de código má
 - ✅ Listar tareas con su fecha de creación
 - ✅ Completar y eliminar tareas por ID
 - ✅ Validación de las entradas del usuario
+- ✅ Guarda las tareas registradas en formato JSON (Para comprobarlo debe ejecutar el proyecto con el comando "dotnet run".)
 
 
 🛠️ Tecnologías Lenguaje: C# Plataforma: .NET (cualquier versión que soporte consola) Compilador: dotnet, Visual Studio o csc 📦 Requisitos previos .NET SDK (recomendado 6.0 o superior) Visual Studio Community O Visual Studio Code con extensión C#
 
-⁉️ ¿Cómo encontrar la carpeta donde se aloja el código? En carpeta llamada "Lista_Tareas2.0" deslizas hacia abajo. El archivo llamado "Program.cs" das doble click y aparece el código.
+⁉️ ¿Cómo encontrar la carpeta donde se aloja el código? En carpeta llamada "Lista_Tareas2.0" deslizas hacia abajo, encontrarás los diferentes archivos que forman este proyecto.
 
 ▶️ Cómo ejecutar
 
@@ -35,5 +36,3 @@ Github: https://github.com/JuTevan25
 - `Tarea.cs`: modelo de una tarea
 - `GestorTarea.cs`: lógica para agregar, listar, completar y eliminar
 
-## Próximas mejoras
-- Implementación de formato JSON y guardar sus tareas.

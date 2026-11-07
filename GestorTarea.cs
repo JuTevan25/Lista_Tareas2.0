@@ -1,5 +1,3 @@
-using System.Text.Json.Serialization;
-
 public class GestorTarea
 {
     private int _siguienteId => _tareas.Count > 0 ? _tareas.Max(t => t.Id) + 1 : 1;
